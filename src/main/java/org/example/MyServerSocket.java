@@ -13,6 +13,7 @@ public class MyServerSocket {
     Socket socket; // 메시지 통신
     BufferedReader reader;
 
+
     public MyServerSocket() {
         try {
             // 1.서버소켓 생성(리스너)
