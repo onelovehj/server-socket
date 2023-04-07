@@ -24,7 +24,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>MyServerSocket</mainClass>
+                            <mainClass>org.example.MyServerSocket</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
