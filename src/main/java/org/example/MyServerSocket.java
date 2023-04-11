@@ -2,6 +2,7 @@ package org.example;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Timer;
@@ -22,9 +23,9 @@ public class MyServerSocket {
                 System.out.println("서버소켓이 4432번 기다리다는 중");
                 socket = serverSocket.accept(); // while을 돌면서 대기 시킨다.(랜덤포트 지정해준다.). 포트 충돌 막을려고 ->Demon 프로그램.
                 reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-
+                InetAddress inet = socket.getInetAddress();
                 String inputData = reader.readLine();
-                System.out.println("받은메시지:" + inputData);
+                System.out.println("받은메시지:" + "[From: " + inet + "]" + " " + inputData);
                 System.out.println("클라이언트 연결됨");
             }
         } catch (Exception e) {
